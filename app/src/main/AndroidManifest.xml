@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.bjzcht.lovebeequick">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- 定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!-- 微信支付权限-->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <!-- 支付宝权限-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!--讯飞权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_UPDATES" />
+
+
+    <application
+        android:name="com.bjzcht.lovebeequick.AppApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--科大讯飞-->
+        <meta-data android:name="IFLYTEK_APPKEY_AD" android:value="595b4ceb"/>
+
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.FullScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <!-- 商品详情界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <!-- 商品详情界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.GoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 搜索商品界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 更多商品界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.MoreGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 云店铺详情界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.StoreDitailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 登陆界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 注册界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 个人资料界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ModifyPersonageInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 添加地址界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.AddNewAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 地址列表管理界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.AddressListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 编辑地址界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.EditAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 确认订单界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 立即购买确认订单界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.BuyNowConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 创建订单成功界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.CreateOrderSuccessActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 订单列表界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.OrderListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 确认支付界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ConfirmPayActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wxa9ce91980a596169"/>
+            </intent-filter>
+        </activity>
+        <!-- 订单详情界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.OrderDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的商品管理界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.GoodsManagerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 选择商品界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ChoiceGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 评价订单商品界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.CommentOrderGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的评价界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.MyCommentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 余额界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.RemainingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 充值卡充值界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.TopUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden"/>
+        <!-- 充值详情界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.TopUpDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 绑定手机界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.BindingPhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 安全设置界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.SafetySettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置提现密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.SettingWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改提现密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ModifyWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 忘记密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ResetWithdrawPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 更改绑定手机号码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ChangePhoneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 我的积分界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.MyIntegralActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置支付密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.SettingPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改支付密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ModifyPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 忘记支付密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ResetPayPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 找回登陆密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ResetLoginPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 修改登陆密码界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ModifyLoginPwdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 成为会员界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.ToBeVipActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 设置关于界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.AboutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 新人专区界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.NewExclusiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- web界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <!-- 微信支付返回结果界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+        <!-- 支付宝h5支付界面-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <!-- 支付宝界面-->
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+
+        <!-- 首次进入时的界面-->
+        <activity
+            android:name="com.bjzcht.lovebeequick.gui.activity.FirstInActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+
+        <!-- 讯飞-->
+        <service
+            android:name="com.iflytek.voiceads.update.DownloadService"/>
+        <activity
+            android:name="com.iflytek.voiceads.request.IFLYBrowser"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

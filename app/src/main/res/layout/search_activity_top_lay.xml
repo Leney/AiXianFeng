@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp">
+
+        <ImageView
+            android:id="@+id/search_goods_back_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/back_img"/>
+
+        <EditText
+            android:id="@+id/search_goods_input_edit"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/search_goods_back_img"
+            android:layout_toRightOf="@id/search_goods_back_img"
+            android:background="@drawable/rectangle_shape"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColorHint="@color/input_hint_color"
+            android:textSize="@dimen/goods_market_price_size"/>
+
+        <Button
+            android:id="@+id/search_goods_search_btn"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/search_home_title"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/spline_color"
+        android:visibility="gone"/>
+    <!-- 排序部分-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 综合-->
+        <TextView
+            android:id="@+id/search_order_synthesize_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/synthesize"
+            android:textColor="@color/search_order_text_selector"
+            android:textSize="@dimen/text_size_12sp"/>
+
+        <View
+            android:layout_width="@dimen/split_line_height"
+            android:layout_height="20dp"
+            android:background="@color/classify_title_right_line"
+            android:visibility="gone"/>
+        <!-- 价格-->
+        <LinearLayout
+            android:id="@+id/search_goods_price_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/search_order_price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/price"
+                android:textColor="@color/search_order_text_selector"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <!--<ImageView
+                android:id="@+id/search_order_price_img"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/icon_filter1"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/split_line_height"
+            android:layout_height="20dp"
+            android:background="@color/classify_title_right_line"
+            android:visibility="gone"/>
+
+        <!-- 销量-->
+        <LinearLayout
+            android:id="@+id/search_goods_sales_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/search_order_sales_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/sales"
+                android:textColor="@color/search_order_text_selector"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <!--<ImageView
+                android:id="@+id/search_order_sales_img"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/icon_filter4"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/split_line_height"
+            android:layout_height="20dp"
+            android:background="@color/classify_title_right_line"
+            android:visibility="gone"/>
+
+        <!-- 评价-->
+        <LinearLayout
+            android:id="@+id/search_goods_comment_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/search_order_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/comment"
+                android:textColor="@color/search_order_text_selector"
+                android:textSize="@dimen/text_size_12sp"/>
+
+            <!--<ImageView
+                android:id="@+id/search_order_comment_img"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:src="@drawable/icon_filter4"/>-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_line_height"
+        android:background="@color/spline_color"/>
+
+    <!-- 找到相关商品多少件-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/search_goods"
+            android:textColor="@color/search_text_number_color"
+            android:textSize="@dimen/text_size_12sp"/>
+        <!-- 总数-->
+        <TextView
+            android:id="@+id/search_goods_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/text_size_12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/piece"
+            android:textColor="@color/search_text_number_color"
+            android:textSize="@dimen/text_size_12sp"/>
+
+    </LinearLayout>
+</LinearLayout>
