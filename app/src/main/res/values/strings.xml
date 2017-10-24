@@ -229,7 +229,7 @@
     <string name="input_search_text">请输入搜索条件</string>
     <string name="confirm_pay">确认支付</string>
     <string name="warm_confirm_pay">如果您在支付过程中遇到任何问题，请联系客服！</string>
-    <string name="warm_confirm_pay_telephone">4000596069</string>
+    <string name="warm_confirm_pay_telephone"></string>
     <string name="pay_by_balance">余额支付</string>
     <string name="pay_by_chat">微信支付</string>
     <string name="pay_by_zhifubao">支付宝</string>
@@ -406,10 +406,10 @@
     <string name="get_top_up_info_failed">获取充值信息失败</string>
     <string name="confirm_top_up">确认充值</string>
     <string name="top_up_warm_tips">充值198以上记得联系客服小妹领取礼品哦(^_^)</string>
-    <string name="service_phone">客服电话: 4000596069</string>
+    <string name="service_phone"></string>
     <string name="weixin_top_up">微信充值</string>
     <string name="card_top_up">充值卡充值</string>
-    <string name="can_not_call">无法进入拨打电话界面,客服电话：4000596069</string>
+    <string name="can_not_call">无法进入拨打电话界面</string>
     <string name="choice_pic">选择图片</string>
     <string name="camera">相机</string>
     <string name="pics">图库</string>
@@ -425,7 +425,7 @@
     <string name="update_now">立即更新</string>
     <string name="update_later">暂不更新</string>
 
-    <string name="company_info">© 2016 Copyright 深圳云邦信息技术有限责任公司 \n @版权所有  鲁ICP备16015033号-1</string>
+    <string name="company_info">© 2016 Copyright 北京众成汇通信息技术有限公司 \n @版权所有  京ICP备14018854号-1    京ICP证150771号</string>
     <string name="check_update">检查更新</string>
     <string name="calculation">计算中&#8230;</string>
     <string name="format_clear_cache">清除缓存(%s)</string>

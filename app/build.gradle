@@ -10,8 +10,8 @@ android {
         applicationId "com.bjzcht.lovebeequick"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 1
-        versionName "V1.0"
+        versionCode 4
+        versionName "V4.8.5"
         // 控制日志Log 输出打印
         buildConfigField("boolean", "enableLog", "true")
     }

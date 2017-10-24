@@ -423,7 +423,7 @@ public class TabUserCenterFragment extends BaseFragment implements View.OnClickL
             case UserCenterMenu.USER_SERVICE:
                 // 客服
                 try {
-                    Uri uri = Uri.parse("tel:4000596069");
+                    Uri uri = Uri.parse("tel:4008484842");
                     Intent intent = new Intent(Intent.ACTION_DIAL, uri);
                     startActivity(intent);
                 } catch (Exception e) {

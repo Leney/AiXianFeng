@@ -23,8 +23,8 @@
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
                 android:paddingRight="20dp"
-                android:visibility="gone"
-                android:src="@drawable/login_back_img"/>
+                android:src="@drawable/login_back_img"
+                android:visibility="gone"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -48,9 +48,9 @@
                 android:paddingRight="10dp"
                 android:paddingTop="5dp"
                 android:text="@string/register"
-                android:visibility="gone"
                 android:textColor="@color/tab_text_color_select"
-                android:textSize="@dimen/title_text_size"/>
+                android:textSize="@dimen/title_text_size"
+                android:visibility="gone"/>
         </LinearLayout>
 
         <ImageView
