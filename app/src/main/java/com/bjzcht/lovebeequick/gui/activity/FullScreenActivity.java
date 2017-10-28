@@ -32,7 +32,7 @@ public class FullScreenActivity extends BaseActivity {
     @Override
     protected void initView() {
         showCenterView();
-        if (PreferencesUtils.getBoolean("is_first_in",true)) {
+        if (PreferencesUtils.getBoolean("is_first_in", true)) {
             PreferencesUtils.putBoolean("is_first_in", false);
             FirstInActivity.startActivity(FullScreenActivity.this);
             finish();
@@ -93,6 +93,11 @@ public class FullScreenActivity extends BaseActivity {
             showCenterView();
             DLog.i("llj", "全屏广告请求成功！！！");
             final NativeADDataRef nativeADDataRef = list.get(0);
+            if (nativeADDataRef == null || nativeADDataRef.getAdtype().equals(NativeADDataRef.AD_DOWNLOAD)){
+                MainActivity.startActivity(FullScreenActivity.this);
+                finish();
+                return;
+            }
 
             countDownText.start(3);
             nativeADDataRef.onExposured(tabImg);

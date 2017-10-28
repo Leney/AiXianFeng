@@ -19,18 +19,6 @@ import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.facebook.drawee.view.SimpleDraweeView;
-import com.iflytek.voiceads.AdError;
-import com.iflytek.voiceads.IFLYNativeAd;
-import com.iflytek.voiceads.IFLYNativeListener;
-import com.iflytek.voiceads.NativeADDataRef;
-
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.bjzcht.lovebeequick.R;
 import com.bjzcht.lovebeequick.gui.fragment.TabClassifyFragment;
 import com.bjzcht.lovebeequick.gui.fragment.TabHomeFragment;
@@ -44,6 +32,17 @@ import com.bjzcht.lovebeequick.util.PreferencesUtils;
 import com.bjzcht.lovebeequick.util.Util;
 import com.bjzcht.lovebeequick.util.download.DownloadManagerUtil;
 import com.bjzcht.lovebeequick.util.log.DLog;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.iflytek.voiceads.AdError;
+import com.iflytek.voiceads.IFLYNativeAd;
+import com.iflytek.voiceads.IFLYNativeListener;
+import com.iflytek.voiceads.NativeADDataRef;
+
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
@@ -154,6 +153,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         public void onADLoaded(List<NativeADDataRef> list) {
             DLog.i("llj","banner广告请求成功！！！");
             final NativeADDataRef nativeADDataRef = list.get(0);
+            if(nativeADDataRef == null || nativeADDataRef.getAdtype().equals(NativeADDataRef.AD_DOWNLOAD)) return;
             DLog.i("llj","icon----->>>"+nativeADDataRef.getIcon());
             DLog.i("llj","imageUrl----->>>"+nativeADDataRef.getImage());
 

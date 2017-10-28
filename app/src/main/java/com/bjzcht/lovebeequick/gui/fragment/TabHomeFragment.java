@@ -424,6 +424,7 @@ public class TabHomeFragment extends BaseFragment implements View.OnClickListene
         public void onADLoaded(List<NativeADDataRef> list) {
             DLog.i("llj", "banner广告请求成功！！！");
             final NativeADDataRef nativeADDataRef = list.get(0);
+            if(nativeADDataRef == null || nativeADDataRef.getAdtype().equals(NativeADDataRef.AD_DOWNLOAD)) return;
             DLog.i("llj", "icon----->>>" + nativeADDataRef.getIcon());
             DLog.i("llj", "imageUrl----->>>" + nativeADDataRef.getImage());
 
